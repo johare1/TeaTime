@@ -1,0 +1,82 @@
+body{
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* background-image: linear-gradient(to bottom right, rgb(147, 180, 154), rgb(255, 255, 255)); */
+    background-image: url('./img/background.jpg');
+    background-size: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.title_head{
+    padding-top: 3%;
+    font-size: 35pt;
+    font-weight: 600;
+    text-align: center;
+    color:white;
+    text-shadow: 1px 1pt black;
+    width:100%;
+}
+
+.menu-strip{
+    height: 4%;
+    margin: 2px;
+    background-color: transparent;
+    padding-left: 5px;
+
+}
+
+.menu-text{
+    color: white;
+    text-decoration: none;
+    text-shadow: 1px 1pt black;
+}
+
+.foot{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:40px;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1pt black;
+}
+
+.content-grid{
+    display: grid;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    grid-template-columns: 33% 32% 30%;
+    grid-column-gap: 1em;
+    width: 100%;
+    grid-auto-rows: minmax(100px,auto);
+    margin: 1em;
+}
+.grid-item{
+    text-align: center;
+    color:black;
+    text-shadow: 1px 1pt whitesmoke;
+    background-color: whitesmoke;
+    
+}
+.item1{
+    grid-row: 1/3;
+}
+.item6{
+    grid-column:1/4;
+}
+
+.teaSelect{
+    height: 100%;
+    width: 100%;
+    font-size: 20pt;
+}
+.startButton{
+    width:60%;
+    height:25%;
+    margin:8%;
+    align-items: center;
+    background-color: green;
+    color:white;
+}
