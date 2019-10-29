@@ -3,49 +3,54 @@
     <head>  
         <meta charset="UTF-8">
         <title>TeaTime</title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
+        <link rel="stylesheet" href="style.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,700|Prata" rel="stylesheet">
+        <script src="Scripts.js"></script>
+    </head> 
+    <body onload="setLoadEvents()">
         <div class="menu-strip">
             <a class="menu-text" href="#about">About</a>
         </div>
-        <div class="title_head">TeaTime</div>
-        <div class="content-grid">
-            <div class="grid-item item1">
-                <select class = "teaSelect" multiple="multiple">
-                    <option value="Black">Black</option>
-                    <option value="Green">Green</option>
-                    <option value="Pu-erh">Pu-erh</option>
-                    <option value="White">White</option>
-                    <option value="Oolong">Oolong</option>
-                    <option value="Herbal">Herbal</option>
-                    <option value="Chamomile">Chamomile</option>
-                    <option value="Rooibos">Rooibos</option>
-                </select>
-            </div>
-            <div class="grid-item item2">
-                <h4>Steep Time</h4>    
-                <h1>00:00</h1>
-            </div>
-            <div class="grid-item item3">
-                <button class="startButton">
-                    <h1>Start</h1>
-                </button>
-            </div>
-            <div class="grid-item item4">
-                <h4>Recommended Water Temperature</h4>    
-                <h1>104° F</h1>
-            </div>
-            <div class="grid-item item5">
-                <h4>Enter Custom Time</h4>
-                <h1>00:00</h1>
-            </div>
-            <div class="grid-item item6">
-                <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eaque vitae culpa sint quidem ullam quas saepe natus repellendus nesciunt.</h4>
+        <div class="title_head">teatime</div>
+        <div class="body-container">
+            <div class="content-grid">
+                <div class="grid-item item1">
+                    <select class = "teaSelect" multiple="multiple">
+                        <option  value="Black" onclick="selectedTeaChanged(0)">black</option>
+                        <option value="Green" onclick="selectedTeaChanged(1)">green</option>
+                        <option value="Pu-erh" onclick="selectedTeaChanged(2)">pu-erh</option>
+                        <option value="White" onclick="selectedTeaChanged(3)">white</option>
+                        <option value="Oolong">oolong</option>
+                        <option value="Herbal">herbal</option>
+                        <option value="Chamomile">chamomile</option>
+                        <option value="Rooibos">rooibos</option>
+                    </select>
+                </div>
+                <div class="grid-item item2">
+                    <h4>steep time</h4>    
+                    <h1 id="steepTime">00:00</h1>
+                </div>
+                <div class="grid-item item3">
+                    <button class="startButton" id="btnStart" onclick="btnStartClicked()">
+                        <h1>start</h1>
+                    </button>
+                </div>
+                <div class="grid-item item4">
+                    <h4>recommended water temperature <u id="btnConvert" onclick="temperatureToggle()" style="text-align: right; margin-left:8%;">°C</u></h4>    
+                    <h1 id="waterTemp">0° F</h1>
+                </div>
+                <div class="grid-item item5">
+                    <h4>custom time</h4>
+                    <input disabled= "true" type="time" id="customTime" value="00:00" class="timeInput"/>
+                </div>
+                <div class="grid-item item6">
+                    <h4 id="teaDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eaque vitae culpa sint quidem ullam quas saepe natus repellendus nesciunt.</h4>
+                </div>
             </div>
         </div>
         <footer class="foot">      
             TeaTime 2019    
         </footer>
+        <p hidden id="secondsHdn"></p>
     </body>
 </html>
