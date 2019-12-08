@@ -5,7 +5,7 @@
         <title>TeaTime</title>
         <link rel="stylesheet" href="style.css"/>
         <link href="https://fonts.googleapis.com/css?family=Lato:300,700|Prata" rel="stylesheet">
-        <script src="Scripts.js"></script>
+        <script type="text/javascript" src="Scripts.js"></script>
     </head> 
     <body onload="setLoadEvents()">
         <div class="menu-strip">
@@ -20,10 +20,9 @@
                         <option value="Green" onclick="selectedTeaChanged(1)">green</option>
                         <option value="Pu-erh" onclick="selectedTeaChanged(2)">pu-erh</option>
                         <option value="White" onclick="selectedTeaChanged(3)">white</option>
-                        <option value="Oolong">oolong</option>
-                        <option value="Herbal">herbal</option>
-                        <option value="Chamomile">chamomile</option>
-                        <option value="Rooibos">rooibos</option>
+                        <option value="Oolong" onclick="selectedTeaChanged(4)">oolong</option>
+                        <option value="Chamomile" onclick="selectedTeaChanged(5)">chamomile</option>
+                        <option value="Rooibos" onclick="selectedTeaChanged(6)">rooibos</option>
                     </select>
                 </div>
                 <div class="grid-item item2">
@@ -31,7 +30,7 @@
                     <h1 id="steepTime">00:00</h1>
                 </div>
                 <div class="grid-item item3">
-                    <button class="startButton" id="btnStart" onclick="btnStartClicked()">
+                    <button class="startButton" id="btnStart" disabled="true" onclick="btnStartClicked()">
                         <h1>start</h1>
                     </button>
                 </div>
@@ -41,13 +40,14 @@
                 </div>
                 <div class="grid-item item5">
                     <h4>custom time</h4>
-                    <input disabled= "true" type="time" id="customTime" value="00:00" class="timeInput"/>
+                    <input type="time" id="customTime" value="00:00" class="timeInput" onchange="customTimeChanged()"/>
                 </div>
                 <div class="grid-item item6">
                     <h4 id="teaDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eaque vitae culpa sint quidem ullam quas saepe natus repellendus nesciunt.</h4>
                 </div>
             </div>
         </div>
+        <div class="title_foot"></div>
         <footer class="foot">      
             TeaTime 2019    
         </footer>
