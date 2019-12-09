@@ -113,11 +113,10 @@ function startTimer(duration) {
             }
 
             if (--timer < 0) {
+                playAudio();
                 clearInterval(myTimer);
                 steepTime.innerText = "Your tea is done!"
-                window.alert("Your tea is done!");
                 document.getElementById("btnStart").disabled = false;
-                
             }
 
         }, 1000);
@@ -168,4 +167,9 @@ function buttonHover(s)
 
 function stopInterval(){
    document.getElementById('intervalID').textContent = 'stop';
+}
+
+function playAudio(){
+    var soundDone = new Audio("alert.wav");
+    soundDone.play();
 }
