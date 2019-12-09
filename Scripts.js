@@ -33,8 +33,9 @@ function validateString(input)
     }
 }
 
-function selectedTeaChanged(index)
+function selectedTeaChanged()
 {
+    var index = document.getElementById("select").selectedIndex;
     if(document.getElementById("intervalID").textContent == 'go'){
         stopInterval();
     }
@@ -55,10 +56,19 @@ function setLoadEvents()
 {
     var jsonString = getJSON('https://teatime-6336b.firebaseio.com/.json');
     list = JSON.parse(jsonString);
+    var i;
+    var selectBox = document.getElementById("select");
+
+    for(i = 0; i < Object.keys(list).length; i++){
+        var option = document.createElement("option");
+        option.text = list[i].teaName;
+        selectBox.add(option);
+    }
+
     teaDescription.innerText = "Welcome to TeaTime! Please select your type of tea to get started.";
     steepTime.innerText = "00:00";
     waterTemp.innerText = "0°F";
-    
+
 }
 
 //https://stackoverflow.com/questions/12460378/how-to-get-json-from-url-in-javascript
@@ -157,6 +167,5 @@ function buttonHover(s)
 }
 
 function stopInterval(){
-
    document.getElementById('intervalID').textContent = 'stop';
 }

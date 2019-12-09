@@ -16,14 +16,14 @@
         <div class="body-container">
             <div class="content-grid">
                 <div class="grid-item item1">
-                    <select class = "teaSelect" multiple="multiple">
-                        <option  value="Black" onclick="selectedTeaChanged(0)">black</option>
+                    <select id="select" class = "teaSelect" multiple="multiple" onchange="selectedTeaChanged()">
+                        <!-- <option  value="Black" onclick="selectedTeaChanged(0)">black</option>
                         <option value="Green" onclick="selectedTeaChanged(1)">green</option>
                         <option value="Pu-erh" onclick="selectedTeaChanged(2)">pu-erh</option>
                         <option value="White" onclick="selectedTeaChanged(3)">white</option>
                         <option value="Oolong" onclick="selectedTeaChanged(4)">oolong</option>
                         <option value="Chamomile" onclick="selectedTeaChanged(5)">chamomile</option>
-                        <option value="Rooibos" onclick="selectedTeaChanged(6)">rooibos</option>
+                        <option value="Rooibos" onclick="selectedTeaChanged(6)">rooibos</option> -->
                     </select>
                 </div>
                 <div class="grid-item item2">
@@ -44,13 +44,10 @@
                     <input type="time" id="customTime" value="00:00" class="timeInput" onchange="customTimeChanged()"/>
                 </div>
                 <div class="grid-item item6">
-                    <h4 id="teaDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eaque vitae culpa sint quidem ullam quas saepe natus repellendus nesciunt.</h4>
+                    <h4 id="teaDescription"></h4>
                 </div>
             </div>
         </div>
-        <button onclick="stopInterval()">
-            <h1>test</h1>
-        </button>
         <div class="title_foot"></div>
         <footer class="foot">      
             TeaTime 2019    
