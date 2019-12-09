@@ -134,3 +134,12 @@ function convertToFahrenheit(temp)
     selectedTemp = newTemp;
     return newTemp;
 }
+
+function buttonHover(s)
+{
+    if(s === 'in'){
+         document.getElementById('btnStart').style.backgroundColor = 'darkGray';
+    }else{
+        document.getElementById('btnStart').style.backgroundColor = 'transparent';
+    }
+}
