@@ -3,6 +3,7 @@ var tempMode = "F";
 var selectedTemp;
 var isCustomTime = false;
 var timerSeconds = 0;
+var displayedTime;
 
 function btnStartClicked()
 {
@@ -34,8 +35,12 @@ function validateString(input)
 
 function selectedTeaChanged(index)
 {
+    if(document.getElementById("intervalID").textContent == 'go'){
+        stopInterval();
+    }
     teaDescription.innerText= list[index].teaDescription;
     steepTime.innerText= list[index].steepTime;
+    displayedTime = list[index].steepTime;
     waterTemp.innerText = list[index].temp.toString() + "°F";
     if(list[index].temp == 0){
         waterTemp.innerText = "Can be brewed hot or cold";
@@ -76,12 +81,13 @@ function getJSON(url) {
 
 
 function startTimer(duration) {
-
+    document.getElementById('intervalID').textContent = 'go';
     if(duration === 0){
 
     }else{
         var timer = duration, minutes, seconds;
-        var myTimer = setInterval(function () {
+         var myTimer = setInterval(function () {
+
             minutes = parseInt(timer / 60, 10);
             seconds = parseInt(timer % 60, 10);
 
@@ -89,6 +95,12 @@ function startTimer(duration) {
             seconds = seconds < 10 ? "0" + seconds : seconds;
 
             steepTime.innerText = minutes + ":" + seconds;
+
+            if(document.getElementById('intervalID').textContent == 'stop'){
+                clearInterval(myTimer);
+                steepTime.innerText = displayedTime;
+                return;
+            }
 
             if (--timer < 0) {
                 clearInterval(myTimer);
@@ -142,4 +154,9 @@ function buttonHover(s)
     }else{
         document.getElementById('btnStart').style.backgroundColor = 'transparent';
     }
+}
+
+function stopInterval(){
+
+   document.getElementById('intervalID').textContent = 'stop';
 }
