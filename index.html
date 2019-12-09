@@ -5,6 +5,7 @@
         <title>TeaTime</title>
         <link rel="stylesheet" href="style.css"/>
         <link href="https://fonts.googleapis.com/css?family=Lato:300,700|Prata" rel="stylesheet">
+        <audio id="audio" src="http://dev.interactive-creation-works.net/1/1.ogg" ></audio>
         <script type="text/javascript" src="Scripts.js"></script>
     </head> 
     <body onload="setLoadEvents()">
@@ -17,13 +18,6 @@
             <div class="content-grid">
                 <div class="grid-item item1">
                     <select id="select" class = "teaSelect" multiple="multiple" onchange="selectedTeaChanged()">
-                        <!-- <option  value="Black" onclick="selectedTeaChanged(0)">black</option>
-                        <option value="Green" onclick="selectedTeaChanged(1)">green</option>
-                        <option value="Pu-erh" onclick="selectedTeaChanged(2)">pu-erh</option>
-                        <option value="White" onclick="selectedTeaChanged(3)">white</option>
-                        <option value="Oolong" onclick="selectedTeaChanged(4)">oolong</option>
-                        <option value="Chamomile" onclick="selectedTeaChanged(5)">chamomile</option>
-                        <option value="Rooibos" onclick="selectedTeaChanged(6)">rooibos</option> -->
                     </select>
                 </div>
                 <div class="grid-item item2">
@@ -49,7 +43,7 @@
             </div>
         </div>
         <div class="title_foot"></div>
-        <footer class="foot">      
+        <footer class="foot" onclick="playAudio()">      
             TeaTime 2019    
         </footer>
         <p hidden id="secondsHdn"></p>
