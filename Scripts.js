@@ -170,6 +170,7 @@ function stopInterval(){
 }
 
 function playAudio(){
-    var soundDone = new Audio("alert.wav");
-    soundDone.play();
+    // var soundDone = new Audio("alert.wav");
+    // soundDone.play();
+    alert("Your tea is done!")
 }
