@@ -124,3 +124,8 @@ body{
 ::-moz-selection {
     background: #21CE99; 
 }
+
+.aboutText{
+    color:white;
+    text-align: center;
+}
