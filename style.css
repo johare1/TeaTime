@@ -3,11 +3,9 @@ body{
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    /* background-image: linear-gradient(to bottom right, rgb(147, 180, 154), rgb(255, 255, 255)); */
     background-image: url('./img/background1.jpg');
     background-color: #D0D1D3;
     background-size: 100%;
-    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
     font-family: 'Lato', sans-serif;
     font-weight: 300;
 }
@@ -15,13 +13,9 @@ body{
     padding-top: 1%;
     padding-bottom: 1%;
     font-size: 35pt;
-    /* font-weight: 600; */
     text-align: center;
     color:#dbdbdb;
-    /* text-shadow: 1px 1pt black; */
     width:100%;
-    /* background-color: #D0D1D3;  */
-    /* background-image: linear-gradient(to bottom, #D0D1D3,white);  */
 }
 
 .title_foot{
@@ -32,13 +26,10 @@ body{
     text-align: center;
     color:#040D14;
     width:100%;
-    /* background-image: linear-gradient(to bottom, white,#D0D1D3);  */
 }
 
 .menu-strip{
     height: 4%;
-    /* margin: 2px; */
-    /* background-color: #D0D1D3; */
     padding-left: 5px;
 
 }
@@ -46,7 +37,6 @@ body{
 .menu-text{
     color: #dbdbdb;
     text-decoration: none;
-    /* text-shadow: 1px 1pt black; */
 }
 
 .foot{
@@ -56,14 +46,11 @@ body{
     height:40px;
     text-align: center;
     color: #dbdbdb;
-    /* text-shadow: 1px 1pt black; */
 }
 
 .body-container{
     border: 20px solid transparent;
     margin-left: 5px;
-    /* background-color: #898D90; */
-    /* background-color: white; */
 }
 
 .content-grid{
@@ -80,10 +67,7 @@ body{
 .grid-item{
     text-align: center;
     color:black;
-    /* text-shadow: 1px 1pt #898D90; */
-    /* background-color: #D0D1D3; */
     background-color: #dbdbdb;
-    /* border-radius: 10px; */
     border: 2px solid #040D14;
     box-shadow:  1px 1px 3px black;
 }
@@ -116,7 +100,6 @@ body{
     font-size: 15pt;
     text-align: center;
     width: 30%;
-    /* font-weight: bold; */
 }
 ::selection {
     background: #21CE99; 
