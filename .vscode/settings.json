@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/f540e3de-4009-4ea8-89c5-b219cff46806/resourceGroups/Comp324/providers/Microsoft.Web/sites/teatime",
+    "appService.deploySubpath": ""
+}
